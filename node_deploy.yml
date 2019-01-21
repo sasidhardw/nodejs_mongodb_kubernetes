@@ -1,0 +1,16 @@
+kind: Deployment
+metadata:
+   name: emp-data
+spec:
+   replicas: 2
+   template:
+     metadata:
+       labels:
+        run: emp-data
+     spec:
+       containers:
+       - name: emp-data
+         image: sasidhardw/nodejs_mongo
+         ports:
+         - containerPort: 8888
+
